@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Concert Search</title>
+</head>
+<body>
+  <h2>Search Concerts</h2>
+  <input type="text" id="searchInput" placeholder="Enter concert name">
+  <button onclick="searchConcerts()">Search</button>
+
+  <ul id="concertList"></ul>
+
+  <script>
+    function searchConcerts() {
+      const keyword = document.getElementById('searchInput').value;
+      fetch(`/concerts?name=${encodeURIComponent(keyword)}`)
+        .then(response => response.json())
+        .then(data => {
+          const list = document.getElementById('concertList');
+          list.innerHTML = '';
+          data.forEach(concert => {
+            const item = document.createElement('li');
+            item.innerText = `${concert.name} - ${concert.location} @ ${concert.concertTime}`;
+            list.appendChild(item);
+          });
+        });
+    }
+  </script>
+</body>
+</html>
