@@ -1,7 +1,4 @@
 # Concert-Booking
-
-Here's a detailed API documentation section you can include for your Concert Booking system:
-
 ---
 
 ## 📘 Concert Booking API Documentation
@@ -118,5 +115,4 @@ Booking confirmed for user@example.com
 
 ---
 
-Would you like this in Postman format or a Swagger YAML file for API documentation tools?
 
