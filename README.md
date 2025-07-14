@@ -114,20 +114,24 @@ Booking confirmed for user@example.com
 ```
 ---
 
+
 <img width="840" height="563" alt="Screen Shot 2025-07-14 at 5 43 00 PM" src="https://github.com/user-attachments/assets/97c7faaf-9488-4f5e-bb40-af40d1703dfe" />
 
-🔗 Relationship
 
-One concert can have many bookings
 
-Booking has @ManyToOne relation to Concert
+### 🔗 Relationship
 
-⚙️ Auto-DDL
+* `One concert can have many bookings`
 
-Tables are created/updated automatically from Java entities using:
+* `Booking has @ManyToOne relation to Concert`
 
+### ⚙️ Auto-DDL
+
+* Tables are created/updated automatically from Java entities using:
+
+```
   spring.jpa.hibernate.ddl-auto=update
-
+```
 
 
 ---
